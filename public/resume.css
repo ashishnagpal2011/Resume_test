@@ -288,3 +288,11 @@ section:nth-child(2n + 1) {
     height: inherit;
     width: 50%;
 }
+
+#container-contact{
+    height: 550px;
+    width: 750px;
+    margin: 30px;
+    border: 2px solid black;
+    background-image: linear-gradient(to right bottom, red, cyan 110%, blue 60%)
+}
