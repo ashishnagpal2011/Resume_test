@@ -4,6 +4,9 @@ body {
     font-size: 30px;
 }
 
+body::-webkit-scrollbar { 
+    display: none; 
+}
 
 
 /* Body Header */
@@ -22,8 +25,56 @@ body {
 
 /* Horizontal Lists */
 
-.horizontal-list {
+.bars{
+    color: white;
+    margin: 0;
+    margin-right: 5%;
+    display: none;
+}
+
+.bars i {
+    font-size: 2rem;
+}
+
+.dropdown-list{
+    margin: 0;
+    display: none;
+    background-color: #828470;
+    box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-list ul{
+    margin: 0.2rem 0.2rem;
+    text-align: left;
+    padding: 0px 0.8rem;
+}
+
+.dropdown-menu:hover .dropdown-list{
+    display: block;
+    position: absolute;
+    right: 3%;
+}
+
+.dropdown-list li{
+    margin: 0.4rem 0px;
+}
+
+.no-list-style{
     list-style: none;
+}
+
+.no-list-style li {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.no-list-style li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.horizontal-list {
     padding-left: 0px;
     margin: 0px;
 }
@@ -31,14 +82,8 @@ body {
 .horizontal-list li {
     display: inline-block;
     margin: 0px 8px 8px 0px;
-    font-weight: 100;
-    font-size: 0.9rem;
 }
 
-.horizontal-list li a {
-    color: white;
-    text-decoration: none;
-}
 
 .nav-menu li a {
     transition: color 0.5s, border-bottom 4s;
@@ -48,11 +93,6 @@ body {
     color: lightgrey;
     border-bottom: 1px solid black;
 }
-
-.text-center {
-    text-align: center;
-}
-
 
 
 /* Name and Social Icons*/
@@ -70,7 +110,6 @@ body {
 }
 
 .social-icons li a i {
-    /*color: red;*/
     padding: 10px;
     font-size: 1rem;
     border-radius: 50%;
@@ -85,11 +124,10 @@ body {
 /*Section Classes*/
 
 section {
-    width: 100%;
-    /*height: 75vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 section:nth-child(2n) {
@@ -184,6 +222,8 @@ section:nth-child(2n + 1) {
     margin-left: 10px;
     vertical-align: middle;
 }
+
+
 
 /* Work Experience */
 
@@ -286,9 +326,9 @@ section:nth-child(2n + 1) {
     line-height: 20px;
 }
 
-.text-align-justify {
-    text-align: justify;
-}
+
+
+
 
 
 /* Portfolio Section */
@@ -305,7 +345,7 @@ section:nth-child(2n + 1) {
 .portfolio-image-container {
     max-width: 300px;
     overflow: hidden;
-    margin: 10px;
+    margin: 30px;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -336,11 +376,13 @@ section:nth-child(2n + 1) {
     color: white;
 }
 
+
+
 /* Contact Form */
 
 #contact {
     background-color: #0abcf9;
-    background-image: linear-gradient(to left bottom, orange, cyan 120%, blue 100%);
+    background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
     color: white;
     padding-bottom: 40px;
 }
@@ -449,6 +491,19 @@ button:focus {
     outline: none;
 }
 
+/* Common Text Align Classes */
+
+.text-right{
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
 
 /* Common Margin Classes */
 
@@ -517,5 +572,60 @@ button:focus {
 }
 
 
+@media only screen and (max-width: 572px) {
+    
+    .timeline-box {
+        width: 100%;
+        left: 10% !important;
+    }
+
+    .bars {
+        display: block;
+    }
+    
+    
+    .nav-menu {
+        display: none;
+    } 
+}
 
 
+
+@media only screen and (max-width: 768px) {
+
+
+    .timeline-box {
+        width: 90%;
+        left: 10% !important;
+    }
+
+    .timeline-box::after {
+        left: -9.3% !important;
+    }
+
+    #timeline-divider {
+        top: 10%;
+        left: 2%;
+    }
+
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #my-details-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-form-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+}
+
+s
